@@ -1,0 +1,13 @@
+﻿@using ShoppingListTask.Models
+@model ApplicationUser
+
+@using (Html.BeginForm("ProcessLogin", "UserSecurity"))
+{
+
+    @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { value = Model.UserName } })
+    @Html.ValidationMessageFor(model => model, "", new { @class = "text-danger" })
+
+    <input type="submit" value="Login" />
+    @* Display a status message to reflect the login attempt's status *@
+    <span style="color:white">@TempData["LoginStatusMessage"]</span>
+}

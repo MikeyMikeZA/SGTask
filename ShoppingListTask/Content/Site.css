@@ -16,9 +16,32 @@
     white-space: normal;
 }
 
+@keyframes fade-in-CompanyLogo {
+    from {
+        opacity: 0;
+        background-color: white;
+    }
+
+    to {
+        opacity: 1;
+        background-color: grey;
+    }
+}
+
+h2 {
+    color: yellow;
+    -webkit-animation: fade-in-CompanyLogo 2.2s;
+    animation: fade-in-CompanyLogo 2.2s;
+}
+
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
     max-width: 280px;
+}
+
+body {
+    padding-top: 120px;
+    padding-bottom: 20px;    
 }
